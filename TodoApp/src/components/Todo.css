@@ -1,0 +1,32 @@
+.todo-container{
+    background-color: var(--bg-color);
+    max-width: 500px;
+     width: 500px;
+     display: flex;
+     flex-direction: column;
+     /* justify-content: center; */
+     text-align: center;
+     padding: 10%;
+     height: 600px;
+     border-radius: 6px;
+     /* box-shadow: 0 8px 27px rgba(0, 0, 0, 0.244); */
+     /* border: 1px solid; */
+     /* padding: 10px; */
+     box-shadow: 15px 15px black;
+
+
+}
+
+.todo-container h1{
+    color: var(--for-color);
+    padding: 10px;
+    margin: 5px;
+    outline: none;
+}
+
+/* .input-container{
+    position: relative;
+}
+.button-container{
+    position: absolute;
+} */

@@ -1,0 +1,25 @@
+.button-input {
+    margin-top: 10px;
+    border: none;
+    padding: 8px;
+    width: 95px;
+    height: 40px;
+    background-color: #0C5488;
+    color:#8FA8C1;
+    /* outline: none; */
+    /* border: 1px ; */
+    /* align-items: flex-end; */
+    border-radius: 4px;
+    text-align: center;
+    margin-left:10px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.button-input:hover{
+    opacity: 1;
+    font-weight: bold;
+}
+
+
+

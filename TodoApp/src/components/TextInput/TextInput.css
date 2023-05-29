@@ -1,0 +1,26 @@
+.input-text{
+    margin-top: 10px;
+    border: none;
+    padding: 8px;
+    justify-content: center;
+    /* text-align: left; */
+    width: 285px;
+    background-color: var(--bg-color);
+    align-items: flex-start;
+    border: 1px solid;
+    border-color: var(--border-color); 
+    border-radius: 4px;
+    height: 40px;
+    color:var(--for-color)
+    
+}
+::placeholder {
+    color:var(--for-color);
+    
+}
+.danger{
+    margin-left: 10px;
+    color: red;
+    font-size: small;
+    text-align: left;
+}
