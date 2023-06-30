@@ -7,10 +7,11 @@ app.use(cors());
 app.use(express.json());
 
 const todoList =[{
-    key:"test",
-    task:"test",
+    key:"first",
+    task:"First",
     tag:false,
     complete:false
+
 },
 ]
 
@@ -57,12 +58,49 @@ app.put("/api/todo",(req,res)=>{
     // destructure body data
     const{id,todo,tag,isCompleted} = req.body;
 
-    console.log(id,"===id");
+    // body data array
+
+    // var bodyarray=[];
+    // bodyarray=Object.entries(req.body);  //save all datas to bodyarray
+
+
+    var keys=["id","todo","tag","isCompleted"];
+    var missedData=[];
+
+    // console.log(bodyarray,"===array data");
+
+    for (let index = 0;index < keys.length -1; index++) {
+
+        // console.log(keys[index],"kkk",index+1);
+        if (!(req.body.hasOwnProperty(keys[index]))) {
+            // console.log(req.body.hasOwnProperty(keys[index]),"No");
+            missedData.push(keys[index])
+        }
+        
+        
+    }
+
+    if(missedData.length){
+
+        return res.status(400).json({ message: missedData.map((key) => `Field ${key} is required`) });
+    }
+    // console.log(missedData);
+
+   
+    // (bodyarray.map((arrayValue)=>console.log(arrayValue,"adfa")))
+    // bodyarray.map((eachArray) => eachArray[1] === "" && keys.push(eachArray[0]));
+    // console.log(keys[0],"===array data2");
+
+    //hasOwnProperty used for find data (id) exist in body 
+    // console.log(req.body.hasOwnProperty("id"));
+
+
+    // console.log(id,"===id");
 
     // find id exist in todoList 
-    const isExist=todoList.find((data)=> data.key === id);
+    const isExist=todoList.find((data)=> data.key === id);  
 
-     console.log(req.body,"==tst");
+    //  console.log(req.body,"==tst");
 
         // update edited data
     if(isExist){
